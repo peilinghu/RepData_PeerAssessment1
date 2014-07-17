@@ -8,7 +8,7 @@ This process utilizes is.weekend function in chron package. Install the package 
 library(chron)
 ```
 
-#### Loading and preprocessing the data
+### Loading and preprocessing the data
 
 
 ```r
