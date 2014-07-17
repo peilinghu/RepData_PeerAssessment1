@@ -21,7 +21,7 @@ Make a histogram of the total number of steps taken each day Aggregation of step
 
 ```r
 sum_of_steps <- aggregate(steps ~ date, data=df, FUN=sum)
-barplot(sum_of_steps$steps, names.arg = sum_of_steps$date, xlab = "date", ylab = "steps")
+barplot(sum_of_steps$steps, names.arg = sum_of_steps$date, xlab = "date", ylab = "steps", main = "Total Steps by Date")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
@@ -52,7 +52,7 @@ Make a time series plot of the 5-minutes interval and the average number of step
 
 ```r
 steps_by_int <- aggregate(steps ~ interval, data=df, FUN=mean)
-plot(steps_by_int, type="l", xlab="interval", ylab="steps")
+plot(steps_by_int, type="l", xlab="interval", ylab="steps", main = "Mean Steps by Interval")
 ```
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
@@ -106,7 +106,7 @@ Make a histogram of the total number of steps taken each day and Calculate and r
 ```r
 # What is the impact of imputing missing data on the estimates of the total daily number of steps?
 sum_of_steps <- aggregate(steps ~ date, data=df, FUN=sum)
-barplot(sum_of_steps$steps, names.arg = sum_of_steps$date, xlab = "date", ylab = "steps")
+barplot(sum_of_steps$steps, names.arg = sum_of_steps$date, xlab = "date", ylab = "steps", main = "Total Steps by Date")
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
